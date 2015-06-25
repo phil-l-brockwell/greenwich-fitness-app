@@ -8,6 +8,8 @@ A mobile app built using Angular JS/Phonegap.
 * Added Bootstrap for styling
 
 # Next...
+* Refactor each view into separate files
+* Refactor app.js, extracting controller and factories
 * Google map on contact us page
 * Style main heading
 * Add reviews functionality
