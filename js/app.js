@@ -43,7 +43,11 @@ app.factory('reviews', function() {
   return o;
 });
 
-app.controller('MainCtrl', function($scope, reviews) {
+app.controller('MainCtrl', function($scope) {
+
+})
+
+app.controller('ReviewsCtrl', function($scope, reviews) {
 
   $scope.reviews = reviews.reviews
 
