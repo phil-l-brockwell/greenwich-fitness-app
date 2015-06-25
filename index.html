@@ -1,0 +1,64 @@
+<html ng-app='app'>
+
+  <head>
+    <link rel='stylesheet' href='bootstrap.min.css'>
+
+    <script src="js/angular.min.js"></script>
+    <script src='js/angular-ui-router.js'></script>
+    <script src="js/app.js"></script>
+  </head>
+
+  <body ng-controller='MainCtrl'>
+
+    <div class='row'>
+
+      <div class="col-md-6 col-md-offset-3">
+        <div class='page-header'>    
+          <h1>Greenwich Fitness</h1>
+        </div>
+
+        <ui-view></ui-view>
+
+        <script type="text/ng-template" id='/reviews.html'>
+          reviews page
+        </script>
+
+        <script type="text/ng-template" id='/consultancy.html'>
+          consultancy page
+        </script>
+
+        <script type="text/ng-template" id='/equiptment.html'>
+          equiptment page
+        </script>
+
+        <script type="text/ng-template" id='/contact.html'>
+        contact page
+        </script>
+
+        <script type="text/ng-template" id="/home.html">
+  
+        <form ng-submit="addPost()">
+          <div class='form-group'>
+            <input class='form-control' type="text" placeholder="Title" ng-model="title"></input>
+          </div>
+          <div class='form-group'>
+            <input class='form-control' type="text" placeholder="Link" ng-model="link"></input>
+          </div>
+          <button type="submit" class="btn btn-primary">Post</button>
+        </form> 
+  
+        <div ng-repeat="post in posts | orderBy:'-upvotes'">
+          <span ng-click="incrementUpvotes(post)">^</span>
+          <a ng-show="post.link" href="{{post.link}}">{{post.title}}</a>
+          <span ng-hide="post.link">{{post.title}}</span>
+          - upvotes: {{post.upvotes}}
+        </div>
+
+      </div>
+      </script>
+
+    </div>
+
+  </body>
+
+</html>
