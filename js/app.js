@@ -56,6 +56,7 @@ app.controller('ReviewsCtrl', function($scope, reviews) {
     $scope.reviews.push({
       text: $scope.text,
       name: $scope.name,
+      date: new Date().toUTCString(),
       votes: 0
     });
     $scope.text = '';
@@ -69,5 +70,4 @@ app.controller('ReviewsCtrl', function($scope, reviews) {
   $scope.downvote = function(review) {
     review.votes -= 1;
   };
-
 });
