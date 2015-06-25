@@ -14,7 +14,7 @@
 
       <div class="col-md-6 col-md-offset-3">
         <div class='page-header'>    
-          <h1>Greenwich Fitness</h1>
+          <h1>Greenwich Fitness <small>Making you Fit</small></h1>
         </div>
 
         <ui-view></ui-view>
@@ -36,16 +36,34 @@
         </script>
 
         <script type="text/ng-template" id="/reviews.html">
+
+
   
         <form ng-submit="addReview()">
           <div class='form-group'>
-            <input class='form-control' type="text" placeholder="Title" ng-model="text"></input>
+            <input class='form-control' type="text" placeholder="Text" ng-model="text"></input>
+          </div>
+          <div class='form-group'>
+            <input class='form-control' type="text" placeholder="Your Name" ng-model="name"></input>
           </div>
           <button type="submit" class="btn btn-primary">Post</button>
         </form> 
   
         <div ng-repeat="review in reviews">
-          <span>{{review.text}}</span>
+
+          <div class="panel panel-default">
+            <div class="panel-body">
+              {{review.text}} - {{review.votes}} votes
+            </div>
+            <div class="panel-footer">
+              Review posted by {{review.name}}
+              <br>
+              Did you find it Useful?
+              <button ng-click='upvote(review)'>YES</button>
+              <button ng-click='downvote(review)'>NO</button>
+            </div>
+          </div>        
+
         </div>
 
       </div>

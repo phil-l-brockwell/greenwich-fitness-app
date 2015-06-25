@@ -11,7 +11,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('reviews', {
       url: '/reviews',
       templateUrl: '/reviews.html',
-      controller: 'MainCtrl'
+      controller: 'ReviewsCtrl'
     })
     .state('consultancy', {
       url: '/consultancy',
@@ -34,11 +34,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
 });
 
 app.factory('reviews', function() {
-  var o = { reviews: [{text: 'review 1' },
-                      {text: 'review 2' },
-                      {text: 'review 3' },
-                      {text: 'review 4' },
-                      {text: 'review 5' }
+  var o = { reviews: [{text: 'review 1', name: 'A Smith', votes: 0 },
+                      {text: 'review 2', name: 'A Smith', votes: 0 },
+                      {text: 'review 3', name: 'A Smith', votes: 0 },
+                      {text: 'review 4', name: 'A Smith', votes: 0 },
+                      {text: 'review 5', name: 'A Smith', votes: 0 }
                     ] };
   return o;
 });
@@ -54,9 +54,20 @@ app.controller('ReviewsCtrl', function($scope, reviews) {
   $scope.addReview = function() {
     if(!$scope.text || $scope.text === '') return;
     $scope.reviews.push({
-      text: $scope.text
+      text: $scope.text,
+      name: $scope.name,
+      votes: 0
     });
     $scope.text = '';
+    $scope.name = '';
+  };
+
+  $scope.upvote = function(review) {
+    review.votes += 1;
+  };
+
+  $scope.downvote = function(review) {
+    review.votes -= 1;
   };
 
 });
