@@ -2,8 +2,8 @@ angular.module('greenwichFitness.controllers', [])
 
 .controller('HomeCtrl', function($scope) {})
 
-.controller('ConsultantsCtrl', function($scope, Equiptment) {
-  $scope.items = Equiptment.items;
+.controller('ConsultantsCtrl', function($scope, Consultants) {
+  $scope.consultants = Consultants.consultants;
 })
 
 .controller('ContactCtrl', function($scope) {})
