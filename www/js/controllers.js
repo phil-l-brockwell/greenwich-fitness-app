@@ -2,7 +2,9 @@ angular.module('greenwichFitness.controllers', [])
 
 .controller('HomeCtrl', function($scope) {})
 
-.controller('ConsultancyCtrl', function($scope) {})
+.controller('ConsultantsCtrl', function($scope, Equiptment) {
+  $scope.items = Equiptment.items;
+})
 
 .controller('ContactCtrl', function($scope) {})
 
@@ -15,11 +17,11 @@ angular.module('greenwichFitness.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
   
-  $scope.chats = Equiptment.all();
+  $scope.items = Equiptment.items;
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Consultants) {
-  $scope.chat = Consultants.get($stateParams.chatId);
+.controller('EquiptmentDetailCtrl', function($scope, $stateParams, Equiptment) {
+  $scope.item = Equiptment.get($stateParams.equiptmentId);
 })
 
 .controller('ReviewsCtrl', function($scope, Reviews) {

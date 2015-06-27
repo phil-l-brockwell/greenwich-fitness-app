@@ -47,12 +47,12 @@ angular.module('greenwichFitness', ['ionic', 'greenwichFitness.controllers', 'gr
       }
     })
 
-  .state('tab.chat-detail', {
-    url: '/chats/:chatId',
+  .state('tab.equiptment-detail', {
+    url: '/equiptment/:equiptmentId',
     views: {
-      'tab-chats': {
-        templateUrl: 'templates/chat-detail.html',
-        controller: 'ChatDetailCtrl'
+      'tab-equiptment': {
+        templateUrl: 'templates/equiptment-detail.html',
+        controller: 'EquiptmentDetailCtrl'
       }
     }
   })
@@ -67,12 +67,12 @@ angular.module('greenwichFitness', ['ionic', 'greenwichFitness.controllers', 'gr
     }
   })
 
-  .state('tab.consultancy', {
-    url: '/consultancy',
+  .state('tab.consultants', {
+    url: '/consultants',
     views: {
-      'tab-consultancy': {
-        templateUrl: 'templates/tab-consultancy.html',
-        controller: 'ConsultancyCtrl'
+      'tab-consultants': {
+        templateUrl: 'templates/tab-consultants.html',
+        controller: 'ConsultantsCtrl'
       }
     }
   })
