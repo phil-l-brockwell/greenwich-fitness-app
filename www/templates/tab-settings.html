@@ -6,7 +6,7 @@
     <li class="item item-toggle">
       Turn on notifications
       <label class="toggle toggle-assertive">
-        <input type="checkbox">
+        <input ng-click='toggle()' type="checkbox">
         <div class="track">
           <div class="handle"></div>
         </div>
@@ -14,7 +14,7 @@
     </li>
   </ul>
 
-  <div class="list">
+  <div ng-show='notifications' class="list">
 
       <label class="item item-input item-select">
         <div class="input-label">

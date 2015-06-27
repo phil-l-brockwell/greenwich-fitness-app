@@ -9,7 +9,15 @@ angular.module('greenwichFitness.controllers', [])
 .controller('ContactCtrl', function($scope) {})
 
 .controller('SettingsCtrl', function($scope) {
-  
+
+  $scope.notifications = false;
+
+  $scope.toggle = function() {
+    if ($scope.notifications == false) $scope.notifications = true;
+    else $scope.notifications = false;
+    console.log($scope.notifications)
+  }
+
 })
 
 .controller('EquiptmentCtrl', function($scope, Equiptment) {
