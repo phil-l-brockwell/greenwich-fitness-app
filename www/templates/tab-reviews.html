@@ -1,0 +1,33 @@
+<ion-view view-title="Reviews">
+  <ion-content>
+
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input ng-model="text" type="text" placeholder="Enter your review here...">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Enter your name here..." ng-model='author'>
+      </label>
+    </div>
+
+    <button ng-click="post(text, author); text=''; author=''" class="button button-full button-positive">
+      Post Review
+    </button>
+
+    <ion-list>
+      <div class="card" ng-repeat='review in reviews'>
+        <div class="item item-divider">
+          {{review.author}} said this on {{review.date}}
+        </div>
+        <div class="item item-text-wrap">
+          {{review.text}}
+          {{review.votes}}
+        </div>
+        <div class="item item-divider">
+          <button ng-click='upvote(review)' class='button button-positive'>+</button>
+          <button ng-click='downvote(review)' class='button button-assertive'>-</button>
+        </div>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>
