@@ -9,20 +9,20 @@ angular.module('greenwichFitness.controllers', [])
 .controller('ContactCtrl', function($scope, $ionicLoading) {
 
   function initialize() {
-    var myLatlng = new google.maps.LatLng(51.477593,-0.010291);
+    var gsomCoords = new google.maps.LatLng(51.477593,-0.010291);
 
     var mapOptions = {
-      center: myLatlng,
+      center: gsomCoords,
       zoom: 16,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
-    var map = new google.maps.Map(document.getElementById("map"),
-        mapOptions);
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
     var marker = new google.maps.Marker({
-      position: myLatlng,
+      position: gsomCoords,
       map: map,
+      animation: google.maps.Animation.DROP,
       title: 'Greenwich Fitness'
     });
 
