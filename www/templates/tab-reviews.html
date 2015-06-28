@@ -23,11 +23,11 @@
           {{review.text}}
         </div>
         <div class="item item-divider">
-          <button ng-click='upvote(review)' class='button button-positive'>+</button>
-          <button ng-click='downvote(review)' class='button button-assertive'>-</button>
           <h2 style='display:inline'>
             This review has {{review.votes}} votes
           </h2>
+          <i ng-click='upvote(review)' class="ion-checkmark-circled"></i>
+          <i ng-click='downvote(review)' class='ion-close-circled'></i>
         </div>
       </div>
     </ion-list>
