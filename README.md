@@ -12,4 +12,6 @@ A mobile app built using Angular JS/Ionic Framework.
 
 * Style main heading
 * Add notifications
+* Add slideshow to home page, with special offer
+* Welcome message and brief background
 * Host rails api on heroku to store data: reviews, etc.
