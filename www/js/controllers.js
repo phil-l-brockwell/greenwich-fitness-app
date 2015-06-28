@@ -38,7 +38,6 @@ angular.module('greenwichFitness.controllers', [])
   $scope.toggle = function() {
     if ($scope.notifications == false) $scope.notifications = true;
     else $scope.notifications = false;
-    console.log($scope.notifications)
   };
 
 })
