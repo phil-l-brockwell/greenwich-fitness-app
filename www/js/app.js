@@ -25,8 +25,6 @@ angular.module('greenwichFitness', ['ionic', 'greenwichFitness.controllers', 'gr
     templateUrl: "templates/tabs.html"
   })
 
-  // Each tab has its own nav history stack:
-
   .state('tab.home', {
     url: '/home',
     views: {
@@ -36,7 +34,6 @@ angular.module('greenwichFitness', ['ionic', 'greenwichFitness.controllers', 'gr
       }
     }
   })
-
   .state('tab.equiptment', {
       url: '/equiptment',
       views: {
@@ -46,7 +43,6 @@ angular.module('greenwichFitness', ['ionic', 'greenwichFitness.controllers', 'gr
         }
       }
     })
-
   .state('tab.equiptment-detail', {
     url: '/equiptment/:equiptmentId',
     views: {
@@ -56,7 +52,6 @@ angular.module('greenwichFitness', ['ionic', 'greenwichFitness.controllers', 'gr
       }
     }
   })
-
   .state('tab.reviews', {
     url: '/reviews',
     views: {
@@ -66,7 +61,6 @@ angular.module('greenwichFitness', ['ionic', 'greenwichFitness.controllers', 'gr
       }
     }
   })
-
   .state('tab.consultants', {
     url: '/consultants',
     views: {
@@ -76,7 +70,6 @@ angular.module('greenwichFitness', ['ionic', 'greenwichFitness.controllers', 'gr
       }
     }
   })
-
   .state('tab.contact', {
     url: '/contact',
     views: {
@@ -86,7 +79,6 @@ angular.module('greenwichFitness', ['ionic', 'greenwichFitness.controllers', 'gr
       }
     }
   })
-
   .state('tab.settings', {
     url: '/settings',
     views: {

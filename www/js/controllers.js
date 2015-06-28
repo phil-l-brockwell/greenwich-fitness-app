@@ -1,6 +1,8 @@
 angular.module('greenwichFitness.controllers', [])
 
-.controller('HomeCtrl', function($scope) {})
+.controller('HomeCtrl', function($scope, Settings) {
+  $scope.settings = Settings;
+})
 
 .controller('ConsultantsCtrl', function($scope, Consultants) {
   $scope.consultants = Consultants.consultants;
@@ -8,7 +10,7 @@ angular.module('greenwichFitness.controllers', [])
 
 .controller('ContactCtrl', function($scope, $ionicLoading) {
 
-  function initialize() {
+  ionic.Platform.ready = function() {
     var gsomCoords = new google.maps.LatLng(51.477593,-0.010291);
 
     var mapOptions = {
@@ -17,29 +19,25 @@ angular.module('greenwichFitness.controllers', [])
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
-    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
     var marker = new google.maps.Marker({
       position: gsomCoords,
-      map: map,
-      animation: google.maps.Animation.DROP,
-      title: 'Greenwich Fitness'
+      map: $scope.map,
+      animation: google.maps.Animation.DROP
     });
-
-    $scope.map = map;
-  }
-  ionic.Platform.ready(initialize);
+  };
 })
 
-.controller('SettingsCtrl', function($scope) {
+.controller('SettingsCtrl', function($scope, Settings) {
 
-  $scope.notifications = false;
+  $scope.notifications = Settings.notifications;
 
   $scope.toggle = function() {
-    if ($scope.notifications == false) $scope.notifications = true;
-    else $scope.notifications = false;
+    if (Settings.notifications == false) Settings.switchOnNotifications();
+    else Settings.switchOffNotifications();
+    $scope.notifications = Settings.notifications;
   };
-
 })
 
 .controller('EquiptmentCtrl', function($scope, Equiptment) {

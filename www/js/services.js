@@ -1,5 +1,20 @@
 angular.module('greenwichFitness.services', [])
 
+.factory('Settings', function() {
+
+  var o = { notifications: false };
+
+  o.switchOnNotifications = function() {
+    o.notifications = true;
+  };
+
+  o.switchOffNotifications = function() {
+    o.notifications = false;
+  };
+
+  return o;
+})
+
 .factory('Consultants', function() {
 
   var o = { consultants: [

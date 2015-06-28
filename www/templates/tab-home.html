@@ -4,7 +4,11 @@
   <div class="list card">
       <div class="item item-divider">Upcoming</div>
       <div class="item item-body">
-        <div>
+        <div ng-hide='settings.notifications'>
+          Switch on visit notifications
+        </div>
+
+        <div ng-show='settings.notifications'>
           You are due at the gym in:
         </div>
       </div>
