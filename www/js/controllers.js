@@ -16,7 +16,7 @@ angular.module('greenwichFitness.controllers', [])
     if ($scope.notifications == false) $scope.notifications = true;
     else $scope.notifications = false;
     console.log($scope.notifications)
-  }
+  };
 
 })
 
@@ -48,11 +48,11 @@ angular.module('greenwichFitness.controllers', [])
 
   $scope.post = function(text, author) {
     if (text == '' || text == null || author == '' || author == null) {
-      alert('Please enter your review and name!')
-      return;
-    }
-    var newReview = { text: text, author: author, votes: 0, date: new Date().toUTCString() };
-    Reviews.create(newReview);
+      alert('Please enter your review and name!');
+    } else {
+      var newReview = { text: text, author: author, votes: 0, date: new Date().toUTCString() };
+      Reviews.create(newReview);
+    };
   };
 
   $scope.reviews = Reviews.reviews;
