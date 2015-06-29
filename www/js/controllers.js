@@ -25,6 +25,11 @@ angular.module('greenwichFitness.controllers', [])
 
 .controller('ContactCtrl', function($scope, $ionicLoading) {
 
+  $scope.navigateTo = function(link) {
+    window.open(link, '_system', 'location=yes');
+    return false;
+  };
+
   $scope.$on('$ionicView.enter', function() {
     var gsomCoords = new google.maps.LatLng(51.477593,-0.010291);
 

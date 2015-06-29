@@ -26,8 +26,8 @@
           <h2 style='display:inline'>
             This review has {{review.votes}} votes
           </h2>
-          <i ng-click='upvote(review)' class="ion-checkmark-circled"></i>
-          <i ng-click='downvote(review)' class='ion-close-circled'></i>
+          <button class='button button-small button-positive' ng-click='upvote(review)'>+</button>
+          <button class='button button-small button-assertive' ng-click='downvote(review)'>-</button>
         </div>
       </div>
     </ion-list>
