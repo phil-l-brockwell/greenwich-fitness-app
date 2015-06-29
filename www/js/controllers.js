@@ -10,7 +10,7 @@ angular.module('greenwichFitness.controllers', [])
 
 .controller('ContactCtrl', function($scope, $ionicLoading) {
 
-  ionic.Platform.ready = function() {
+  $scope.$on('$ionicView.enter', function() {
     var gsomCoords = new google.maps.LatLng(51.477593,-0.010291);
 
     var mapOptions = {
@@ -26,7 +26,7 @@ angular.module('greenwichFitness.controllers', [])
       map: $scope.map,
       animation: google.maps.Animation.DROP
     });
-  };
+  });
 })
 
 .controller('SettingsCtrl', function($scope, Settings) {
