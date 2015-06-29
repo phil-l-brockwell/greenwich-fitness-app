@@ -5,13 +5,14 @@ angular.module('greenwichFitness.controllers', [])
 
   $scope.$on('$ionicView.enter', function() {
     setInterval(function() {
-      if ($ionicSlideBoxDelegate.currentIndex() + 1 === $ionicSlideBoxDelegate.slidesCount()) {
-        $ionicSlideBoxDelegate.slide(0)
-      } else {
-        $ionicSlideBoxDelegate.next()
-      }
-    }, 5000)
+      if (slideShowHasEnded()) $ionicSlideBoxDelegate.slide(0);
+      else $ionicSlideBoxDelegate.next();
+    }, 5000);
   });
+
+  function slideShowHasEnded() {
+    $ionicSlideBoxDelegate.currentIndex() + 1 === $ionicSlideBoxDelegate.slidesCount();
+  };
 
 })
 
@@ -52,14 +53,6 @@ angular.module('greenwichFitness.controllers', [])
 })
 
 .controller('EquiptmentCtrl', function($scope, Equiptment) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
-  
   $scope.items = Equiptment.items;
 })
 
