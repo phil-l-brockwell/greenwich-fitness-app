@@ -9,7 +9,8 @@
       </div>
 
       <div ng-show='settings.notifications'>
-        You are due at the gym in:
+        You are due at the gym in: {{timeRemaining()}} hours
+        <button ng-click='resetTimer()'>Reset Timer</button>
       </div>
     </div>
   </div>

@@ -2,7 +2,33 @@ angular.module('greenwichFitness.services', [])
 
 .factory('Settings', function() {
 
+  var stop;
+  var SECONDSINDAY = 86400;
+
+  var frequencies = { 'Daily':SECONDSINDAY, 
+                      'Every other day':SECONDSINDAY * 2, 
+                      'Every Three days':SECONDSINDAY * 3, 
+                      'Every Four days':SECONDSINDAY * 4, 
+                      'Weekly':SECONDSINDAY * 7, 
+                      'Fortnightly': SECONDSINDAY * 14 }
+
   var o = { notifications: false };
+
+  o.changeFrequency = function(newFrequency) {
+    o.frequency = newFrequency;
+    o.updateSeconds();
+  };
+
+  o.updateSeconds = function() {
+    clearInterval(stop);
+    o.seconds = frequencies[o.frequency];
+    stop = setInterval(o.deductSecond, 1000);
+  };
+
+  o.deductSecond = function() {
+    o.seconds -= 1;
+    console.log(o.seconds)
+  };
 
   o.switchOnNotifications = function() {
     o.notifications = true;

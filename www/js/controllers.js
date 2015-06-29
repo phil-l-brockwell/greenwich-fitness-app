@@ -4,7 +4,15 @@ angular.module('greenwichFitness.controllers', [])
   
   setInterval(transistion, 5000);
   $scope.settings = Settings;
-  
+
+  $scope.timeRemaining = function() {
+    return Math.floor(Settings.seconds / 3600);
+  };
+
+  $scope.resetTimer = function() {
+    Settings.updateSeconds();
+  };  
+
   function transistion() {
     if (hasSlideShowEnded()) $ionicSlideBoxDelegate.slide(0);
     else $ionicSlideBoxDelegate.next();
@@ -55,6 +63,10 @@ angular.module('greenwichFitness.controllers', [])
     else Settings.switchOffNotifications();
     $scope.notifications = Settings.notifications;
   };
+
+  $scope.updateFrequency = function(newFrequency) {
+    Settings.changeFrequency(newFrequency);
+  };  
 })
 
 .controller('EquiptmentCtrl', function($scope, Equiptment) {

@@ -16,20 +16,20 @@
 
   <div ng-show='notifications' class="list">
 
-      <label class="item item-input item-select">
-        <div class="input-label">
-          Visit the gym
-        </div>
-        <select>
-          <option>Daily</option>
-          <option>Every other day</option>
-          <option>Every Three days</option>
-          <option>Every Four days</option>
-          <option>Weekly</option>
-          <option>Monthly</option>
-        </select>
-      </label>
+    <label class="item item-input item-select">
+      <div class="input-label">
+        Visit the gym
+      </div>
+      <select ng-model='option' ng-change='updateFrequency(option)'>
+        <option>Daily</option>
+        <option>Every other day</option>
+        <option>Every Three days</option>
+        <option>Every Four days</option>
+        <option>Weekly</option>
+        <option>Fortnightly</option>
+      </select>
+    </label>
 
-    </div>
+  </div>
   </ion-content>
 </ion-view>
