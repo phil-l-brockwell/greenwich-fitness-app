@@ -18,7 +18,6 @@ angular.module('greenwichFitness', ['ionic', 'greenwichFitness.controllers', 'gr
 
   $stateProvider
 
-  // setup an abstract state for the tabs directive
     .state('tab', {
     url: "/tab",
     abstract: true,
@@ -89,7 +88,5 @@ angular.module('greenwichFitness', ['ionic', 'greenwichFitness.controllers', 'gr
     }
   })
 
-  // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/home');
-
 });
