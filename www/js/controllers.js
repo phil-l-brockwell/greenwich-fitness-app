@@ -3,9 +3,16 @@ angular.module('greenwichFitness.controllers', [])
 .controller('HomeCtrl', function($scope, Settings, $ionicSlideBoxDelegate) {
   $scope.settings = Settings;
 
-  $scope.nextSlide = function() {
-    $ionicSlideBoxDelegate.next();
-  };
+  $scope.$on('$ionicView.enter', function() {
+    setInterval(function() {
+      if ($ionicSlideBoxDelegate.currentIndex() + 1 === $ionicSlideBoxDelegate.slidesCount()) {
+        $ionicSlideBoxDelegate.slide(0)
+      } else {
+        $ionicSlideBoxDelegate.next()
+      }
+    }, 5000)
+  });
+
 })
 
 .controller('ConsultantsCtrl', function($scope, Consultants) {
