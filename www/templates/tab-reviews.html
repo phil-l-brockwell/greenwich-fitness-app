@@ -8,11 +8,12 @@
       <label class="item item-input">
         <input type="text" placeholder="Enter your name here..." ng-model='author'>
       </label>
+      <label>
+        <button ng-click="post(text, author); text=''; author=''" class="button button-block button-positive">
+        Post Review
+        </button>
+      </label>
     </div>
-
-    <button ng-click="post(text, author); text=''; author=''" class="button button-block button-positive">
-      Post Review
-    </button>
 
     <ion-list>
       <div class="card" ng-repeat='review in reviews'>

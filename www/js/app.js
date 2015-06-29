@@ -23,7 +23,6 @@ angular.module('greenwichFitness', ['ionic', 'greenwichFitness.controllers', 'gr
     abstract: true,
     templateUrl: "templates/tabs.html"
   })
-
   .state('tab.home', {
     url: '/home',
     views: {

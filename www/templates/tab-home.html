@@ -1,20 +1,6 @@
 <ion-view view-title="Greenwich Fitness">
   <ion-content class="padding">
 
-  <div class="list card">
-    <div class="item item-divider">Upcoming</div>
-    <div class="item item-body">
-      <div ng-hide='settings.notifications'>
-        Switch on visit notifications
-      </div>
-
-      <div ng-show='settings.notifications'>
-        You are due at the gym in: {{timeRemaining()}} hours
-        <button ng-click='resetTimer()'>Reset Timer</button>
-      </div>
-    </div>
-  </div>
-
   <ion-slide-box>
     <ion-slide>
       <div class='item item-divider'>
@@ -60,6 +46,20 @@
       </div>
     </ion-slide>
   </ion-slide-box>
+
+  <div class="list card">
+    <div class="item item-divider">Upcoming</div>
+    <div class="item item-body">
+      <div ng-hide='settings.notifications'>
+        <a class='button button-small button-positive' href='#/tab/settings'>Switch on notifications</a>
+      </div>
+
+      <div ng-show='settings.notifications'>
+        You are due at the gym in: {{timeRemaining()}} hours
+        <button class='button button-small button-positive' ng-click='resetTimer()'>Reset Timer</button>
+      </div>
+    </div>
+  </div>
 
     <div class="list card">
       <div class="item item-divider">Recent Updates at Greenwich Fitness</div>
