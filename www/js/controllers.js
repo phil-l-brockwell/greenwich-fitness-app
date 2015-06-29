@@ -1,21 +1,18 @@
 angular.module('greenwichFitness.controllers', [])
 
 .controller('HomeCtrl', function($scope, Settings, $ionicSlideBoxDelegate) {
+  
+  setInterval(transistion, 5000);
   $scope.settings = Settings;
-
-  $scope.$on('$ionicView.enter', function() {
-    setInterval(function() {
-      if (hasSlideShowEnded()) {
-        $ionicSlideBoxDelegate.slide(0);
-      } else {
-        $ionicSlideBoxDelegate.next();
-      }
-    }, 5000)
-  });
+  
+  function transistion() {
+    if (hasSlideShowEnded()) $ionicSlideBoxDelegate.slide(0);
+    else $ionicSlideBoxDelegate.next();
+  };
 
   function hasSlideShowEnded() {
     return $ionicSlideBoxDelegate.currentIndex() + 1 === $ionicSlideBoxDelegate.slidesCount();
-  }
+  };
 
 })
 
