@@ -14,4 +14,4 @@ A mobile app built using Angular JS/Ionic Framework.
 * Style main heading
 * Add notifications
 * Welcome message and brief background
-* Host rails api on heroku to store data: reviews, etc.
+* Host sinatra api on heroku to store data: reviews, etc.
