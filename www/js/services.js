@@ -41,8 +41,7 @@ angular.module('greenwichFitness.services', [])
     }
     ]}
 
-    return o;
-
+  return o;
 })
 
 .factory('Reviews', function() {
@@ -65,19 +64,19 @@ angular.module('greenwichFitness.services', [])
     }
     ]};
 
-    o.create = function(review) {
-      o.reviews.unshift(review)
-    };
+  o.create = function(review) {
+    o.reviews.unshift(review)
+  };
 
-    o.upvote = function(review) {
-      review.votes += 1;
-    };
+  o.upvote = function(review) {
+    review.votes += 1;
+  };
 
-    o.downvote = function(review) {
-      review.votes -= 1;
-    };
+  o.downvote = function(review) {
+    review.votes -= 1;
+  };
 
-    return o;
+  return o;
 })
 
 .factory('Equiptment', function() {
@@ -105,14 +104,14 @@ angular.module('greenwichFitness.services', [])
       description: 'orem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium mi ut purus iaculis ultrices. Donec vel diam vel tortor posuere tempus ac a lorem. Ut fringilla mattis vestibulum. Morbi.'
     }]};
 
-    o.get = function(itemId) {
-      for (var i = 0; i < o.items.length; i++) {
-        if (o.items[i].id === parseInt(itemId)) {
-          return o.items[itemId];
-        }
+  o.get = function(itemId) {
+    for (var i = 0; i < o.items.length; i++) {
+      if (o.items[i].id === parseInt(itemId)) {
+        return o.items[itemId];
       }
-      return null;
     }
+    return null;
+  }
 
   return o;
 });
