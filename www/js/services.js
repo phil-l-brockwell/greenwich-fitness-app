@@ -36,6 +36,7 @@ angular.module('greenwichFitness.services', [])
 
   o.switchOffNotifications = function() {
     o.notifications = false;
+    clearInterval(stop);
   };
 
   return o;
