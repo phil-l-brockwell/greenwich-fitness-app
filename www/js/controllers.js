@@ -1,7 +1,11 @@
 angular.module('greenwichFitness.controllers', [])
 
-.controller('HomeCtrl', function($scope, Settings) {
+.controller('HomeCtrl', function($scope, Settings, $ionicSlideBoxDelegate) {
   $scope.settings = Settings;
+
+  $scope.nextSlide = function() {
+    $ionicSlideBoxDelegate.next();
+  };
 })
 
 .controller('ConsultantsCtrl', function($scope, Consultants) {
