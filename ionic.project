@@ -3,16 +3,16 @@
   "app_id": "",
   "proxies": [
     {
-      "path": "/items",
-      "proxyUrl": "http://ancient-fortress-6314.herokuapp.com/items"
+      "path": "api/items",
+      "proxyUrl": "http://ancient-fortress-6314.herokuapp.com/api/items"
     },
     {
-      "path": "/consultants",
-      "proxyUrl": "https://ancient-fortress-6314.herokuapp.com/consultants"
+      "path": "api/consultants",
+      "proxyUrl": "https://ancient-fortress-6314.herokuapp.com/api/consultants"
     },
     {
-      "path": "/reviews",
-      "proxyUrl": "https://ancient-fortress-6314.herokuapp.com/reviews"
+      "path": "api/reviews",
+      "proxyUrl": "https://ancient-fortress-6314.herokuapp.com/api/reviews"
     }
   ]
 }
