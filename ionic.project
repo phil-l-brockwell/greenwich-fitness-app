@@ -1,4 +1,18 @@
 {
   "name": "mobileCW",
-  "app_id": ""
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "/items",
+      "proxyUrl": "http://ancient-fortress-6314.herokuapp.com/items"
+    },
+    {
+      "path": "/consultants",
+      "proxyUrl": "https://ancient-fortress-6314.herokuapp.com/consultants"
+    },
+    {
+      "path": "/reviews",
+      "proxyUrl": "https://ancient-fortress-6314.herokuapp.com/reviews"
+    }
+  ]
 }

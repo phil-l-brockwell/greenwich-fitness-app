@@ -37,7 +37,12 @@ angular.module('greenwichFitness', ['ionic', 'greenwichFitness.controllers', 'gr
       views: {
         'tab-equiptment': {
           templateUrl: 'templates/tab-equiptment.html',
-          controller: 'EquiptmentCtrl'
+          controller: 'EquiptmentCtrl',
+          resolve: {
+            equiptmentPromise: function(Equiptment) {
+              return Equiptment.getAll();
+            }
+          }
         }
       }
     })
@@ -46,7 +51,12 @@ angular.module('greenwichFitness', ['ionic', 'greenwichFitness.controllers', 'gr
     views: {
       'tab-equiptment': {
         templateUrl: 'templates/equiptment-detail.html',
-        controller: 'EquiptmentDetailCtrl'
+        controller: 'EquiptmentDetailCtrl',
+        resolve: {
+          equiptmentPromise: function(Equiptment) {
+            return Equiptment.getAll();
+          }
+        }
       }
     }
   })
@@ -55,7 +65,12 @@ angular.module('greenwichFitness', ['ionic', 'greenwichFitness.controllers', 'gr
     views: {
       'tab-reviews': {
         templateUrl: 'templates/tab-reviews.html',
-        controller: 'ReviewsCtrl'
+        controller: 'ReviewsCtrl',
+        resolve: {
+          reviewsPromise: function(Reviews) {
+            return Reviews.getAll();
+          }
+        }
       }
     }
   })
@@ -64,7 +79,12 @@ angular.module('greenwichFitness', ['ionic', 'greenwichFitness.controllers', 'gr
     views: {
       'tab-consultants': {
         templateUrl: 'templates/tab-consultants.html',
-        controller: 'ConsultantsCtrl'
+        controller: 'ConsultantsCtrl',
+        resolve: {
+          consultantsPromise: function(Consultants) {
+            return Consultants.getAll();
+          }
+        }
       }
     }
   })

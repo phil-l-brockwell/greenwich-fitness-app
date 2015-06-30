@@ -21,7 +21,6 @@ angular.module('greenwichFitness.controllers', [])
   function hasSlideShowEnded() {
     return $ionicSlideBoxDelegate.currentIndex() + 1 === $ionicSlideBoxDelegate.slidesCount();
   };
-
 })
 
 .controller('ConsultantsCtrl', function($scope, Consultants) {
@@ -88,13 +87,13 @@ angular.module('greenwichFitness.controllers', [])
   };
 
   $scope.post = function(text, author) {
-    if (text == '' || text == null || author == '' || author == null) {
+    if (text == '' || !text || author == '' || !author) {
       alert('Please enter your review and name!');
     } else {
-      var newReview = { text: text, author: author, votes: 0, date: new Date().toUTCString() };
+      var newReview = { text: text, author: author, votes: 0, created_at: new Date().toUTCString() };
       Reviews.create(newReview);
     };
   };
 
-  $scope.reviews = Reviews.reviews;
+  $scope.reviews = Reviews.reviews.reverse();
 });
