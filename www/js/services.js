@@ -12,14 +12,14 @@ angular.module('greenwichFitness.services', [])
                       'Weekly': SECONDSINDAY * 7, 
                       'Fortnightly': SECONDSINDAY * 14 };
 
-  var o = { notifications: false };
+  var o = { notifications: false, frequency: 'Daily' };
 
   o.changeFrequency = function(newFrequency) {
     o.frequency = newFrequency;
-    o.updateSeconds();
+    o.startClock();
   };
 
-  o.updateSeconds = function() {
+  o.startClock = function() {
     clearInterval(stop);
     o.seconds = frequencies[o.frequency];
     stop = setInterval(o.deductSecond, 1000);
@@ -31,6 +31,7 @@ angular.module('greenwichFitness.services', [])
 
   o.switchOnNotifications = function() {
     o.notifications = true;
+    o.startClock();
   };
 
   o.switchOffNotifications = function() {

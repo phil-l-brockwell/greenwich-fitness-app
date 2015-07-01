@@ -58,8 +58,8 @@ angular.module('greenwichFitness.controllers', [])
   $scope.notifications = Settings.notifications;
 
   $scope.toggle = function() {
-    if (Settings.notifications == false) Settings.switchOnNotifications();
-    else Settings.switchOffNotifications();
+    if (Settings.notifications) Settings.switchOffNotifications();
+    else Settings.switchOnNotifications();
     $scope.notifications = Settings.notifications;
   };
 
@@ -94,11 +94,10 @@ angular.module('greenwichFitness.controllers', [])
 
   $scope.post = function(text, author) {
     if (text == '' || !text || author == '' || !author) {
-      alert('Please enter your review and name!');
-    } else {
-      var newReview = { text: text, author: author, votes: 0, created_at: new Date().toUTCString() };
-      Reviews.create(newReview);
+      return alert('Please enter your review and name!');
     };
+    var newReview = { text: text, author: author, votes: 0, created_at: new Date().toUTCString() };
+    Reviews.create(newReview);
   };
 
   $scope.reviews = Reviews.reviews.reverse();
