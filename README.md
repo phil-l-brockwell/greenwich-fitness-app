@@ -8,10 +8,11 @@ A mobile app built using Angular JS/Ionic Framework.
 * Reviews page added, can post new, upvote and downvote
 * Added google maps
 * Added slideshow
+* Built Rails API and hosted on heroku to store data: reviews, etc
 
 # Next...
 
-* Style main heading
 * Add notifications
-* Welcome message and brief background
-* Host sinatra api on heroku to store data: reviews, etc.
+* Styling
+* Update votes in DB
+* Accessibility Features
