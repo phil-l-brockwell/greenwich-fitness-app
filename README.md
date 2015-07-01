@@ -19,3 +19,4 @@ A mobile app built using Angular JS/Ionic Framework.
 * Add padding to bottom of views
 * Add loading icon
 * Photoshop slideshow photos
+* Use Angular to avoid repetition in HTML
