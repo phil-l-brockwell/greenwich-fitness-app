@@ -12,7 +12,7 @@ angular.module('greenwichFitness.services', [])
                       'Weekly': SECONDSINDAY * 7, 
                       'Fortnightly': SECONDSINDAY * 14 };
 
-  var o = { notifications: false, frequency: 'Daily' };
+  var o = { notifications: false, frequency: 'Daily', large: false };
 
   o.changeFrequency = function(newFrequency) {
     o.frequency = newFrequency;

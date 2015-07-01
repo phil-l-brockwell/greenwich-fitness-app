@@ -16,3 +16,6 @@ A mobile app built using Angular JS/Ionic Framework.
 * Styling
 * Update votes in DB
 * Accessibility Features
+* Add padding to bottom of views
+* Add loading icon
+* Photoshop slideshow photos

@@ -1,9 +1,9 @@
-.scroll 
+.scroll
 {
   height: 100%;
 }
  
-#map 
+#map
 {
   margin: 0 auto;
   width: 90%;
@@ -13,9 +13,10 @@
 p
 {
   text-align: justify;
+  text-decoration: bold;
 }
 
-.red
+.big-font
 {
-  color: red;
+  font-size: 20px
 }
