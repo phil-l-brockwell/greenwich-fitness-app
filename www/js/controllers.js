@@ -78,6 +78,12 @@ angular.module('greenwichFitness.controllers', [])
 
 .controller('ReviewsCtrl', function($scope, Reviews) {
 
+  $scope.refresh = function() {
+    Reviews.getAll().success(function() {
+      $scope.$broadcast('scroll.refreshComplete');
+    });
+  };
+
   $scope.upvote = function(review) {
     Reviews.upvote(review);
   };

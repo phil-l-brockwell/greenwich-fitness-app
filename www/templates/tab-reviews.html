@@ -1,6 +1,8 @@
 <ion-view view-title="Reviews">
   <ion-content>
 
+    <ion-refresher pulling-text="Pull to refresh" on-refresh="refresh()"></ion-refresher>
+
     <div class="list list-inset">
       <label class="item item-input">
         <input ng-model="text" type="text" placeholder="Enter your review here...">
