@@ -20,3 +20,4 @@ A mobile app built using Angular JS/Ionic Framework.
 * Add loading icon
 * Photoshop slideshow photos
 * Use Angular to avoid repetition in HTML
+* Add Search function to equiptment page
