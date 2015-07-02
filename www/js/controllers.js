@@ -56,14 +56,13 @@ angular.module('greenwichFitness.controllers', [])
 .controller('SettingsCtrl', function($scope, Settings) {
 
   $scope.large = Settings.large;
+  $scope.notifications = Settings.notifications;
 
   $scope.largerText = function() {
-    Settings.large = true;
+    if (Settings.large == true) Settings.switchOffLargeText();
+    else Settings.switchOnLargeText();
     $scope.large = Settings.large;
-    console.log($scope.large)
   };
-
-  $scope.notifications = Settings.notifications;
 
   $scope.toggle = function() {
     if (Settings.notifications) Settings.switchOffNotifications();

@@ -39,29 +39,41 @@ angular.module('greenwichFitness.services', [])
     clearInterval(stop);
   };
 
+  o.switchOnLargeText = function() {
+    o.large = true;
+  };
+
+  o.switchOffLargeText = function() {
+    o.large = false;
+  };
+
   return o;
 })
 
-.factory('Consultants', function($http) {
+.factory('Consultants', function($http, $ionicLoading) {
 
   var o = { consultants: [] };
 
   o.getAll = function() {
+    $ionicLoading.show();
     return $http.get('http://ancient-fortress-6314.herokuapp.com/api/consultants').success(function(data) {
       angular.copy(data, o.consultants);
+      $ionicLoading.hide();
     })
   };
 
   return o;
 })
 
-.factory('Reviews', function($http) {
+.factory('Reviews', function($http, $ionicLoading) {
 
   var o = { reviews: [] };
 
   o.getAll = function() {
+    $ionicLoading.show();
     return $http.get('http://ancient-fortress-6314.herokuapp.com/api/reviews').success(function(data) {
       angular.copy(data, o.reviews)
+      $ionicLoading.hide();
     })
   };
 
@@ -82,13 +94,15 @@ angular.module('greenwichFitness.services', [])
   return o;
 })
 
-.factory('Equiptment', function($http) {
+.factory('Equiptment', function($http, $ionicLoading) {
 
   var o = { items: [] };
 
   o.getAll = function() {
+    $ionicLoading.show();
     return $http.get('http://ancient-fortress-6314.herokuapp.com/api/items').success(function(data) {
       angular.copy(data, o.items)
+      $ionicLoading.hide();
     })
   };
 

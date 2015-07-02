@@ -1,55 +1,54 @@
 <ion-view view-title="Settings">
   <ion-content>
 
-  <ul class="list">
+    <ul class="list">
 
-    <li class="item item-toggle" ng-class="{'big-font' : large}">
-      Turn on Timer
-      <label class="toggle toggle-assertive">
-        <input ng-click='toggle()' type="checkbox">
-        <div class="track">
-          <div class="handle"></div>
-        </div>
-      </label>
-    </li>
+      <li class="item item-toggle" ng-class="{'big-font' : large}">
+        Turn on Timer
+        <label class="toggle toggle-assertive">
+          <input ng-click='toggle()' type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
 
-    <li class="item item-toggle" ng-class="{'big-font' : large}">
-      Larger Text
-      <label class="toggle toggle-assertive">
-        <input ng-click='largerText()' type="checkbox">
-        <div class="track">
-          <div class="handle"></div>
-        </div>
-      </label>
-    </li>
-
-    <li class="item item-toggle" ng-class="{'big-font' : large}">
-      Bold Text
-      <label class="toggle toggle-assertive">
-        <input ng-click='' type="checkbox">
-        <div class="track">
-          <div class="handle"></div>
-        </div>
-      </label>
-    </li>
-  </ul>
-
-  <div ng-show='notifications' class="list">
-
-    <label class="item item-input item-select">
-      <div class="input-label">
-        Visit the gym
+      <div ng-show='notifications' class="list">
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Visit the gym
+          </div>
+          <select ng-model='option' ng-change='updateFrequency(option)'>
+            <option ng-selected='notifications'>Daily</option>
+            <option>Every other day</option>
+            <option>Every Three days</option>
+            <option>Every Four days</option>
+            <option>Weekly</option>
+            <option>Fortnightly</option>
+          </select>
+        </label>
       </div>
-      <select ng-model='option' ng-change='updateFrequency(option)'>
-        <option ng-selected='notifications'>Daily</option>
-        <option>Every other day</option>
-        <option>Every Three days</option>
-        <option>Every Four days</option>
-        <option>Weekly</option>
-        <option>Fortnightly</option>
-      </select>
-    </label>
 
-  </div>
+      <li class="item item-toggle" ng-class="{'big-font' : large}">
+        Larger Text
+        <label class="toggle toggle-assertive">
+          <input ng-click='largerText()' type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+
+      <li class="item item-toggle" ng-class="{'big-font' : large}">
+        Bold Text
+        <label class="toggle toggle-assertive">
+          <input ng-click='' type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+    </ul>
+
   </ion-content>
 </ion-view>
