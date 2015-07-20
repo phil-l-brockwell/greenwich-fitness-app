@@ -1,9 +1,10 @@
 angular.module('greenwichFitness.controllers', [])
 
-.controller('HomeCtrl', function($scope, Settings, $ionicSlideBoxDelegate) {
+.controller('HomeCtrl', function($scope, Settings, $ionicSlideBoxDelegate, Home) {
   
   setInterval(transistion, 5000);
   $scope.settings = Settings;
+  $scope.slides = Home.slides;
 
   $scope.timeRemaining = function() {
     return Math.floor(Settings.seconds / 3600);

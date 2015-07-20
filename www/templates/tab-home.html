@@ -1,60 +1,20 @@
 <ion-view view-title="Greenwich School of Fitness">
   <ion-content>
 
-  <ion-slide-box>
-    <ion-slide>
-      <div class='list card'>
-        <div class='item item-image'>
-          <img height='350' src='img/slideshow1.jpg'>
+    <ion-slide-box>
+      <ion-slide ng-repeat='slide in slides'>
+        <div class='list card'>
+          <div class='item item-image'>
+            <img alt='{{slide.alt}}' height='360' ng-src='{{slide.src}}'>
+          </div>
         </div>
-      </div>
-    </ion-slide>
+      </ion-slide>
+    </ion-slide-box>
 
-    <ion-slide>
-      <div class='list card'>
-        <div class='item item-image'>
-          <img height='360' src='img/slideshow2.jpg'>
-        </div>
-      </div>
-    </ion-slide>
-
-    <ion-slide>
-      <div class='list card'>
-        <div class='item item-image'>
-          <img height='350' src='img/slideshow3.jpg'>
-        </div>
-      </div>
-    </ion-slide>
-
-    <ion-slide>
-      <div class='list card'>
-        <div class='item item-image'>
-          <img height='350' src='img/slideshow4.jpg'>
-        </div>
-      </div>
-    </ion-slide>
-
-    <ion-slide>
-      <div class='list card'>
-        <div class='item item-image'>
-          <img height='350' src='img/slideshow5.jpg'>
-        </div>
-      </div>
-    </ion-slide>
-
-    <ion-slide>
-      <div class='list card'>
-        <div class='item item-image'>
-          <img height='350' src='img/slideshow6.jpg'>
-        </div>
-      </div>
-    </ion-slide>
-  </ion-slide-box>
-
-  <div class="list card">
-    <div class="item item-divider" ng-class="{'big-font' : settings.large}">Due at the gym in:</div>
-    <div class="item item-body">
-      <div ng-hide='settings.notifications'>
+    <div class="list card">
+      <div class="item item-divider" ng-class="{'big-font' : settings.large}">Due at the gym in:</div>
+      <div class="item item-body">
+        <div ng-hide='settings.notifications'>
         <a class='button button-small button-positive' href='#/tab/settings'>Switch on Timer</a>
       </div>
 
@@ -64,15 +24,6 @@
       </div>
     </div>
   </div>
-
-    <div class="list card">
-      <div class="item item-divider" ng-class="{'big-font' : settings.large}">About Greenwich Fitness</div>
-      <div class="item item-body">
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod mi eros, quis accumsan nisl iaculis eget. Ut suscipit consequat felis, quis auctor ipsum.
-        </p>
-      </div>
-    </div>
 
   </ion-content>
 </ion-view>
