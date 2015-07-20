@@ -103,7 +103,8 @@ angular.module('greenwichFitness.controllers', [])
     if (text == '' || !text || author == '' || !author) {
       return alert('Please enter your review and name!');
     };
-    var newReview = { text: text, author: author, votes: 0, created_at: new Date().toUTCString() };
+    var date = new Date().toUTCString();
+    var newReview = { text: text, author: author, votes: 0, date: date };
     Reviews.create(newReview);
   };
 

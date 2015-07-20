@@ -56,7 +56,7 @@ angular.module('greenwichFitness.services', [])
 
   o.getAll = function() {
     $ionicLoading.show();
-    return $http.get('http://ancient-fortress-6314.herokuapp.com/api/consultants').success(function(data) {
+    return $http.get('http://greenwich-fitness-api.herokuapp.com/api/consultants').success(function(data) {
       angular.copy(data, o.consultants);
       $ionicLoading.hide();
     })
@@ -71,14 +71,14 @@ angular.module('greenwichFitness.services', [])
 
   o.getAll = function() {
     $ionicLoading.show();
-    return $http.get('http://ancient-fortress-6314.herokuapp.com/api/reviews').success(function(data) {
+    return $http.get('http://greenwich-fitness-api.herokuapp.com/api/reviews').success(function(data) {
       angular.copy(data, o.reviews)
       $ionicLoading.hide();
     })
   };
 
   o.create = function(review) {
-    return $http.post('http://ancient-fortress-6314.herokuapp.com/api/reviews', review).success(function(data) {
+    return $http.post('http://greenwich-fitness-api.herokuapp.com/api/reviews', review).success(function(data) {
       o.reviews.unshift(review);
     })
   };
@@ -100,7 +100,7 @@ angular.module('greenwichFitness.services', [])
 
   o.getAll = function() {
     $ionicLoading.show();
-    return $http.get('http://ancient-fortress-6314.herokuapp.com/api/items').success(function(data) {
+    return $http.get('http://greenwich-fitness-api.herokuapp.com/api/items').success(function(data) {
       angular.copy(data, o.items)
       $ionicLoading.hide();
     })
