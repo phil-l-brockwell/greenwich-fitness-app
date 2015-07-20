@@ -36,33 +36,24 @@
   </ion-slide-box>
 
   <div class="list card">
-    <div class="item item-divider" ng-class="{'big-font' : settings.large}">Upcoming</div>
+    <div class="item item-divider" ng-class="{'big-font' : settings.large}">Due at the gym in:</div>
     <div class="item item-body">
       <div ng-hide='settings.notifications'>
         <a class='button button-small button-positive' href='#/tab/settings'>Switch on Timer</a>
       </div>
 
       <div ng-show='settings.notifications'>
-        You are due at the gym in: {{timeRemaining()}} hours
-        <button class='button button-small button-positive' ng-click='resetTimer()'>Reset Timer</button>
+        {{timeRemaining()}} hours
+        <button class='button button-small button-positive' ng-click='resetTimer()'>Reset</button>
       </div>
     </div>
   </div>
 
     <div class="list card">
-      <div class="item item-divider" ng-class="{'big-font' : settings.large}">Recent Updates at Greenwich Fitness</div>
+      <div class="item item-divider" ng-class="{'big-font' : settings.large}">About Greenwich Fitness</div>
       <div class="item item-body">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod mi eros, quis accumsan nisl iaculis eget. Ut suscipit consequat felis, quis auctor ipsum. Integer pharetra dui congue neque efficitur bibendum vel a elit. Nulla elementum, mi feugiat imperdiet lobortis.
-        </p>
-      </div>
-    </div>
-
-    <div class="list card">
-      <div class="item item-divider" ng-class="{'big-font' : settings.large}">Health</div>
-      <div class="item item-body">
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod mi eros, quis accumsan nisl iaculis eget. Ut suscipit consequat felis, quis auctor ipsum. Integer pharetra dui congue neque efficitur bibendum vel a elit. Nulla elementum, mi feugiat imperdiet lobortis.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod mi eros, quis accumsan nisl iaculis eget. Ut suscipit consequat felis, quis auctor ipsum.
         </p>
       </div>
     </div>
