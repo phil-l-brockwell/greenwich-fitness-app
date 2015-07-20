@@ -12,12 +12,7 @@ A mobile app built using Angular JS/Ionic Framework.
 
 # Next...
 
-* Add notifications
 * Styling
-* Update votes in DB
 * Accessibility Features
-* Add padding to bottom of views
-* Add loading icon
 * Photoshop slideshow photos
 * Use Angular to avoid repetition in HTML
-* Add Search function to equiptment page
