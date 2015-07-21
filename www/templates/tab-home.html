@@ -19,7 +19,7 @@
       </div>
 
       <div ng-show='settings.notifications'>
-        {{timeRemaining()}} hours
+        {{ timeRemaining().hours }} hours {{ timeRemaining().minutes }} minutes and {{ timeRemaining().seconds }} seconds
         <button class='button button-small button-positive' ng-click='resetTimer()'>Reset</button>
       </div>
     </div>
