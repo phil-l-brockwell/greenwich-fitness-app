@@ -103,14 +103,6 @@ angular.module('greenwichFitness.controllers', [])
     });
   };
 
-  $scope.upvote = function(review) {
-    Reviews.upvote(review);
-  };
-
-  $scope.downvote = function(review) {
-    Reviews.downvote(review);
-  };
-
   $scope.post = function(text, author) {
     if (text == '' || !text || author == '' || !author) {
       return $ionicPopup.alert({

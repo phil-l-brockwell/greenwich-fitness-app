@@ -107,14 +107,6 @@ angular.module('greenwichFitness.services', [])
     })
   };
 
-  o.upvote = function(review) {
-    review.votes += 1;
-  };
-
-  o.downvote = function(review) {
-    review.votes -= 1;
-  };
-
   return o;
 })
 
