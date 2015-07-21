@@ -11,7 +11,7 @@ angular.module('greenwichFitness.controllers', [])
   };
 
   $scope.resetTimer = function() {
-    Settings.updateSeconds();
+    Settings.startClock();
   };  
 
   function transistion() {
@@ -57,11 +57,12 @@ angular.module('greenwichFitness.controllers', [])
 
 .controller('SettingsCtrl', function($scope, Settings) {
 
-  $scope.style = Settings.style;
+  $scope.settings = Settings;
   $scope.notifications = Settings.notifications;
 
   $scope.changeView = function(newView) {
     Settings.changeView(newView);
+    console.log(Settings.style)
   };
 
   $scope.toggle = function() {
