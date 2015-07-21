@@ -62,10 +62,14 @@ angular.module('greenwichFitness.controllers', [])
 
   $scope.changeView = function(newView) {
     Settings.changeView(newView);
-    console.log(Settings.style)
   };
 
-  $scope.toggle = function() {
+  $scope.toggleInvert = function() {
+    if (Settings.inverted) Settings.exvert();
+    else Settings.invert();
+  };
+
+  $scope.toggleTimer = function() {
     if (Settings.notifications) Settings.switchOffNotifications();
     else Settings.switchOnNotifications();
     $scope.notifications = Settings.notifications;

@@ -6,7 +6,7 @@
       <li class="item item-toggle">
         Turn on Timer
         <label class="toggle toggle-assertive">
-          <input ng-click='toggle()' type="checkbox">
+          <input ng-click='toggleTimer()' type="checkbox">
           <div class="track">
             <div class="handle"></div>
           </div>
@@ -29,18 +29,15 @@
         </label>
       </div>
 
-      <div class="list">
-        <label class="item item-input item-select">
-          <div class="input-label">
-            Accessibility Views
+      <li class="item item-toggle">
+        Invert Colours
+        <label class="toggle toggle-assertive">
+          <input ng-click='toggleInvert()' type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
           </div>
-          <select ng-model='option' ng-change='changeView(option)'>
-            <option ng-selected='style'>Plain</option>
-            <option>Larger Text</option>
-            <option>Inverted Colours</option>
-          </select>
         </label>
-      </div>
+      </li>
 
     </ul>
 

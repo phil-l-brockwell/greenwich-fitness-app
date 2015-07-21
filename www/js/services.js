@@ -5,10 +5,7 @@ angular.module('greenwichFitness.services', [])
   var stop;
   var SECONDSINDAY = 86400;
   var defaultStyle = 'lib/ionic/css/ionic.css';
-
-  var styles = { 'Plain': defaultStyle,
-                 'Larger Text': 'lib/ionic/css/ionic-large.app.css',
-                 'Inverted Colours': 'lib/ionic/css/ionic-invert.app.css' }
+  var invertStyle  = 'lib/ionic/css/ionic-invert.app.css'
 
   var frequencies = { 'Daily': SECONDSINDAY, 
                       'Every other day': SECONDSINDAY * 2, 
@@ -17,7 +14,7 @@ angular.module('greenwichFitness.services', [])
                       'Weekly': SECONDSINDAY * 7, 
                       'Fortnightly': SECONDSINDAY * 14 };
 
-  var o = { notifications: false, frequency: 'Daily', style: defaultStyle };
+  var o = { notifications: false, frequency: 'Daily', style: defaultStyle, inverted: false };
 
   o.changeFrequency = function(newFrequency) {
     o.frequency = newFrequency;
@@ -44,8 +41,14 @@ angular.module('greenwichFitness.services', [])
     clearInterval(stop);
   };
 
-  o.changeView = function(newView) {
-    o.style = styles[newView];
+  o.invert = function() {
+    o.style = invertStyle;
+    o.inverted = true;
+  };
+
+  o.exvert = function() {
+    o.style = defaultStyle;
+    o.inverted = false;
   };
 
   return o;
