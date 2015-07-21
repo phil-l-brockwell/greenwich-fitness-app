@@ -4,15 +4,15 @@
     <div ng-repeat='consultant in consultants' class="list card">
 
       <div class="item item-avatar">
-        <img ng-src="{{consultant.img}}">
+        <img ng-src="{{ consultant.img }}">
         <h2>{{consultant.name}}</h2>
         <p>{{consultant.title}}</p>
       </div>
 
       <div class="item item-body">
-        <img class="full-image" ng-src="{{consultant.mainimg}}">
+        <img class="full-image" ng-src="{{ consultant.mainimg }}">
         <p>{{consultant.profile}}</p>
-        <a href='#/tab/contact' class='button button-small button-positive right-button'>Contact us for more info!</a>
+        <a href='#/tab/contact' class='button button-small button-positive right-button button-equipment'>Contact us for more info!</a>
       </div>
     </div>
 

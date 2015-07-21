@@ -15,12 +15,13 @@
       <div class="item item-divider item-positive">Due at the gym in:</div>
       <div class="item item-body">
         <div ng-hide='settings.notifications'>
-        <a class='button button-small button-positive' href='#/tab/settings'>Switch on Timer</a>
+        <p>Switch on Timer</p>
+        <a class='button button-small button-positive button-to-right' href='#/tab/settings'>Settings</a>
       </div>
 
       <div ng-show='settings.notifications'>
-        {{ timeRemaining().hours }} hours {{ timeRemaining().minutes }} minutes and {{ timeRemaining().seconds }} seconds
-        <button class='button button-small button-positive' ng-click='resetTimer()'>Reset</button>
+        <p>{{ timeRemaining().hours }} hours {{ timeRemaining().minutes }} minutes and {{ timeRemaining().seconds }} seconds</p>
+        <button class='button button-small button-positive button-to-right' ng-click='resetTimer()'>Reset</button>
       </div>
     </div>
   </div>

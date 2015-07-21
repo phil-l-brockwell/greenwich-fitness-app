@@ -15,3 +15,16 @@ p
   text-align: justify;
   text-decoration: bold;
 }
+
+.button-to-right
+{
+  position: absolute;
+  bottom: 27px;
+  right: 27px;
+  width: 90px;
+}
+
+.button-equipment
+{
+  width: 100%;
+}
