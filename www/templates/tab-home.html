@@ -5,7 +5,7 @@
       <ion-slide ng-repeat='slide in slides'>
         <div class='list card'>
           <div class='item item-image'>
-            <img alt='{{slide.alt}}' height='375' ng-src='{{slide.src}}'>
+            <a ng-href='{{slide.a}}'><img alt='{{slide.alt}}' height='375' ng-src='{{slide.src}}'></a>
           </div>
         </div>
       </ion-slide>
