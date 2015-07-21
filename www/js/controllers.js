@@ -83,7 +83,7 @@ angular.module('greenwichFitness.controllers', [])
   $scope.item = Equiptment.get($stateParams.equiptmentId);
 })
 
-.controller('ReviewsCtrl', function($scope, Reviews) {
+.controller('ReviewsCtrl', function($scope, Reviews, $ionicPopup) {
 
   $scope.refresh = function() {
     Reviews.getAll().success(function() {
@@ -101,10 +101,13 @@ angular.module('greenwichFitness.controllers', [])
 
   $scope.post = function(text, author) {
     if (text == '' || !text || author == '' || !author) {
-      return alert('Please enter your review and name!');
+      return $ionicPopup.alert({
+        title: 'Oops, you forgot something...',
+        template: 'Please enter your review and name!'
+      });
     };
     var date = new Date().toUTCString();
-    var newReview = { text: text, author: author, votes: 0, date: date };
+    var newReview = { text: text, author: author, date: date };
     Reviews.create(newReview);
   };
 
