@@ -4,6 +4,11 @@ angular.module('greenwichFitness.services', [])
 
   var stop;
   var SECONDSINDAY = 86400;
+  var defaultStyle = 'lib/ionic/css/ionic.css';
+
+  var styles = { 'Plain': defaultStyle,
+                 'Larger Text': 'lib/ionic/css/ionic-large.app.css',
+                 'Inverted Colours': 'lib/ionic/css/ionic-invert.app.css' }
 
   var frequencies = { 'Daily': SECONDSINDAY, 
                       'Every other day': SECONDSINDAY * 2, 
@@ -12,7 +17,7 @@ angular.module('greenwichFitness.services', [])
                       'Weekly': SECONDSINDAY * 7, 
                       'Fortnightly': SECONDSINDAY * 14 };
 
-  var o = { notifications: false, frequency: 'Daily', large: false };
+  var o = { notifications: false, frequency: 'Daily', style: defaultStyle };
 
   o.changeFrequency = function(newFrequency) {
     o.frequency = newFrequency;
@@ -39,12 +44,8 @@ angular.module('greenwichFitness.services', [])
     clearInterval(stop);
   };
 
-  o.switchOnLargeText = function() {
-    o.large = true;
-  };
-
-  o.switchOffLargeText = function() {
-    o.large = false;
+  o.changeView = function(newView) {
+    o.style = styles[newView];
   };
 
   return o;

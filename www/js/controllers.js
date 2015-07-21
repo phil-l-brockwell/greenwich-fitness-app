@@ -24,8 +24,9 @@ angular.module('greenwichFitness.controllers', [])
   };
 })
 
-.controller('ConsultantsCtrl', function($scope, Consultants) {
+.controller('ConsultantsCtrl', function($scope, Consultants, Settings) {
   $scope.consultants = Consultants.consultants;
+  $scope.settings = Settings;
 })
 
 .controller('ContactCtrl', function($scope, $ionicLoading) {
@@ -56,13 +57,11 @@ angular.module('greenwichFitness.controllers', [])
 
 .controller('SettingsCtrl', function($scope, Settings) {
 
-  $scope.large = Settings.large;
+  $scope.style = Settings.style;
   $scope.notifications = Settings.notifications;
 
-  $scope.largerText = function() {
-    if (Settings.large == true) Settings.switchOffLargeText();
-    else Settings.switchOnLargeText();
-    $scope.large = Settings.large;
+  $scope.changeView = function(newView) {
+    Settings.changeView(newView);
   };
 
   $scope.toggle = function() {

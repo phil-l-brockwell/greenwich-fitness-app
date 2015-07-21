@@ -3,7 +3,7 @@
 
     <ul class="list">
 
-      <li class="item item-toggle" ng-class="{'big-font' : large}">
+      <li class="item item-toggle">
         Turn on Timer
         <label class="toggle toggle-assertive">
           <input ng-click='toggle()' type="checkbox">
@@ -29,35 +29,19 @@
         </label>
       </div>
 
-      <li class="item item-toggle" ng-class="{'big-font' : large}">
-        Larger Text
-        <label class="toggle toggle-assertive">
-          <input ng-click='largerText()' type="checkbox">
-          <div class="track">
-            <div class="handle"></div>
+      <div class="list">
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Accessibility Views
           </div>
+          <select ng-model='option' ng-change='changeView(option)'>
+            <option ng-selected='style'>Plain</option>
+            <option>Larger Text</option>
+            <option>Inverted Colours</option>
+          </select>
         </label>
-      </li>
+      </div>
 
-      <li class="item item-toggle" ng-class="{'big-font' : large}">
-        Bold Text
-        <label class="toggle toggle-assertive">
-          <input ng-click='' type="checkbox">
-          <div class="track">
-            <div class="handle"></div>
-          </div>
-        </label>
-      </li>
-
-      <li class="item item-toggle" ng-class="{'big-font' : large}">
-        Invert Colours
-        <label class="toggle toggle-assertive">
-          <input ng-click='' type="checkbox">
-          <div class="track">
-            <div class="handle"></div>
-          </div>
-        </label>
-      </li>
     </ul>
 
   </ion-content>
