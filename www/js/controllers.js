@@ -1,6 +1,6 @@
 angular.module('greenwichFitness.controllers', [])
 
-.controller('HomeCtrl', function($scope, Settings, $ionicSlideBoxDelegate, Home) {
+.controller('HomeCtrl', function($scope, Settings, $ionicSlideBoxDelegate, Home, $ionicPopup) {
   
   setInterval(transistion, 5000);
   $scope.settings = Settings;
@@ -12,6 +12,10 @@ angular.module('greenwichFitness.controllers', [])
 
   $scope.resetTimer = function() {
     Settings.startClock();
+    $ionicPopup.alert({
+      title: 'Timer Reset',
+      template: 'We hope you enjoy your visit!'
+    })  
   };  
 
   function transistion() {
@@ -113,7 +117,12 @@ angular.module('greenwichFitness.controllers', [])
     };
     var date = new Date().toUTCString();
     var newReview = { text: text, author: author, date: date };
-    Reviews.create(newReview);
+    Reviews.create(newReview).success(function() {
+      $ionicPopup.alert({
+        title: 'Review Successfully Posted!',
+        template: 'Thanks for your feedback.'
+      });
+    });
   };
 
   $scope.reviews = Reviews.reviews.reverse();
