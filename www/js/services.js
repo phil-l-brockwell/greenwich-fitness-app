@@ -4,8 +4,8 @@ angular.module('greenwichFitness.services', [])
 
   var stop;
   var SECONDSINDAY = 86400;
-  var defaultStyle = 'lib/ionic/css/ionic.css';
-  var invertStyle  = 'lib/ionic/css/ionic-invert.app.css'
+  var defaultStyle = 'ionic.css';
+  var invertStyle  = 'ionic-invert.app.css';
 
   var frequencies = { 'Daily': SECONDSINDAY, 
                       'Every other day': SECONDSINDAY * 2, 

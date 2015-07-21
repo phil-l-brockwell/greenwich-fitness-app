@@ -12,16 +12,15 @@
     </ion-slide-box>
 
     <div class="list card">
-      <div class="item item-divider item-positive">Due at the gym in:</div>
       <div class="item item-body">
         <div ng-hide='settings.notifications'>
-        <p>Switch on Timer</p>
-        <a class='button button-small button-positive button-to-right' href='#/tab/settings'>Settings</a>
+        <h4>Switch on Timer</h4>
+        <a class='button button-small button-positive button-center' href='#/tab/settings'>Settings</a>
       </div>
 
-      <div ng-show='settings.notifications'>
-        <p>{{ timeRemaining().hours }} hours {{ timeRemaining().minutes }} minutes and {{ timeRemaining().seconds }} seconds</p>
-        <button class='button button-small button-positive button-to-right' ng-click='resetTimer()'>Reset</button>
+      <div style='text-align: center;' ng-show='settings.notifications'>
+        <h4>You have {{ timeRemaining().hours }} hours {{ timeRemaining().minutes }} minutes and {{ timeRemaining().seconds }} seconds until your next visit</h4>
+        <button class='button button-small button-positive button-center' ng-click='resetTimer()'>Reset</button>
       </div>
     </div>
   </div>
