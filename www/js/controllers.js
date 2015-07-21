@@ -10,7 +10,6 @@ angular.module('greenwichFitness.controllers', [])
     return { hours: Math.floor(Settings.seconds / 3600),
              minutes: Math.floor((Settings.seconds % 3600) / 60),
              seconds: (Settings.seconds % 3600) % 60 }
-    // return Math.floor(Settings.seconds / 3600);
   };
 
   $scope.resetTimer = function() {
