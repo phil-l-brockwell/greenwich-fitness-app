@@ -12,7 +12,4 @@ A mobile app built using Angular JS/Ionic Framework.
 
 # Next...
 
-* Styling
 * Accessibility Features
-* Photoshop slideshow photos
-* Use Angular to avoid repetition in HTML
