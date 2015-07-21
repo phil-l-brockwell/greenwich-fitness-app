@@ -4,6 +4,16 @@
     <ul class="list">
 
       <li class="item item-toggle">
+        Invert Colours
+        <label class="toggle toggle-assertive">
+          <input ng-click='toggleInvert()' type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+
+      <li class="item item-toggle">
         Turn on Timer
         <label class="toggle toggle-assertive">
           <input ng-click='toggleTimer()' type="checkbox">
@@ -28,18 +38,6 @@
           </select>
         </label>
       </div>
-
-      <li class="item item-toggle">
-        Invert Colours
-        <label class="toggle toggle-assertive">
-          <input ng-click='toggleInvert()' type="checkbox">
-          <div class="track">
-            <div class="handle"></div>
-          </div>
-        </label>
-      </li>
-
     </ul>
-
   </ion-content>
 </ion-view>

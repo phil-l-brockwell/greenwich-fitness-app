@@ -1,6 +1,6 @@
 angular.module('greenwichFitness.services', [])
 
-.factory('Settings', function() {
+.factory('Settings', function($ionicLoading) {
 
   var stop;
   var SECONDSINDAY = 86400;
@@ -42,11 +42,17 @@ angular.module('greenwichFitness.services', [])
   };
 
   o.invert = function() {
+    $ionicLoading.show({
+      duration: 2000
+    });
     o.style = invertStyle;
     o.inverted = true;
   };
 
   o.exvert = function() {
+    $ionicLoading.show({
+      duration: 2000
+    });
     o.style = defaultStyle;
     o.inverted = false;
   };

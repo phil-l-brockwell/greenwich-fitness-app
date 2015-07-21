@@ -1,6 +1,6 @@
 {
   "name": "mobileCW",
-  "app_id": "",
+  "app_id": "26710eb8",
   "proxies": [
     {
       "path": "api/items",
