@@ -67,13 +67,15 @@ angular.module('greenwichFitness.services', [])
 })
 
 .factory('Home', function() {
-
-  var o = { slides: [{ src: 'img/slideshow1.jpg', alt: 'Welcome to the Greenwich School of Fitness' },
-                     { src: 'img/slideshow2.jpg', alt: 'Making you Fit'                             },
-                     { src: 'img/slideshow3.jpg', alt: 'Meet our Team of Expert Consultants'        },
-                     { src: 'img/slideshow4.jpg', alt: 'And their vast array of Equipment'          },
-                     { src: 'img/slideshow5.jpg', alt: 'So get in touch Today for your FREE trial'  },
-                     { src: 'img/slideshow6.jpg', alt: "And we're confident you'll be back."        }] };
+      
+  var o = { slides: [{ src: 'img/slideshow1.jpg', alt: 'Welcome to the Greenwich School of Fitness'       },
+                     { src: 'img/slideshow2.jpg', alt: 'Making you Fit'                                   },
+                     { src: 'img/slideshow3.jpg', alt: 'Meet our Team of Expert Consultants'              },
+                     { src: 'img/slideshow4.jpg', alt: 'And their vast array of Equipment'                },
+                     { src: 'img/slideshow5.jpg', alt: 'Leave us a review'                                },
+                     { src: 'img/slideshow6.jpg', alt: 'Get in Touch today for your FREE trial.'          },
+                     { src: 'img/slideshow7.jpg', alt: 'Set a Timer for your next visit, to make sure...' },
+                     { src: 'img/slideshow8.jpg', alt: "You'll be back..."                                }] };
 
   return o;
 })
