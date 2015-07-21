@@ -11,19 +11,24 @@
       </ion-slide>
     </ion-slide-box>
 
-    <div class="list card">
+    <div class='card'>
       <div class="item item-body">
-        <div ng-hide='settings.notifications'>
-        <h4>Switch on Timer</h4>
-        <a class='button button-small button-positive button-center' href='#/tab/settings'>Settings</a>
-      </div>
+        <div class='push-down' ng-hide='settings.notifications'>
+          <div class='bar bar-header bar-calm'>
+            <h4 class='title'>Switch on Timer</h4>
+          </div>
+          <a class='button button-small button-positive button-center' href='#/tab/settings'>Settings</a>
+        </div>
 
-      <div style='text-align: center;' ng-show='settings.notifications'>
-        <h4>You have {{ timeRemaining().hours }} hours {{ timeRemaining().minutes }} minutes and {{ timeRemaining().seconds }} seconds until your next visit</h4>
-        <button class='button button-small button-positive button-center' ng-click='resetTimer()'>Reset</button>
+        <div class='push-down' style='text-align: center;' ng-show='settings.notifications'>
+          <div class='bar bar-header bar-calm'>
+            <h4 class='title'>Next Visit In:</h4>
+          </div>
+          <h4>{{ timeRemaining().hours }} hours {{ timeRemaining().minutes }} minutes and {{ timeRemaining().seconds }} seconds...</h4>
+          <button class='button button-small button-positive button-center' ng-click='resetTimer()'>Reset</button>
+        </div>
       </div>
     </div>
-  </div>
 
   </ion-content>
 </ion-view>
