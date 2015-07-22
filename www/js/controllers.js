@@ -9,7 +9,7 @@ angular.module('greenwichFitness.controllers', [])
   $scope.timeRemaining = function() {
     return { hours: Math.floor(Settings.seconds / 3600),
              minutes: Math.floor((Settings.seconds % 3600) / 60),
-             seconds: (Settings.seconds % 3600) % 60 }
+             seconds: (Settings.seconds % 3600) % 60              }
   };
 
   $scope.resetTimer = function() {
@@ -119,5 +119,5 @@ angular.module('greenwichFitness.controllers', [])
     });
   };
 
-  $scope.reviews = Reviews.reviews.reverse();
+  $scope.reviews = Reviews.reviews;
 });

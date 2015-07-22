@@ -96,7 +96,7 @@ angular.module('greenwichFitness.services', [])
   o.getAll = function() {
     $ionicLoading.show();
     return $http.get('http://greenwich-fitness-api.herokuapp.com/api/reviews').success(function(data) {
-      angular.copy(data, o.reviews)
+      angular.copy(data.reverse(), o.reviews)
       $ionicLoading.hide();
     })
   };
