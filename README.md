@@ -9,7 +9,9 @@ A mobile app built using Angular JS/Ionic Framework.
 * Added google maps
 * Added slideshow
 * Built Rails API and hosted on heroku to store data: reviews, etc
+* Accessibility Features: Alternate style sheet for visually impaired users
 
 # Next...
 
-* Accessibility Features
+* Notifications
+* User Authentication
