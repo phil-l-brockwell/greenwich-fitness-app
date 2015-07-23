@@ -1,17 +1,19 @@
+<!-- Consultants Page -->
 <ion-view view-title="Consultants">
   <ion-content>
 
     <div ng-repeat='consultant in consultants' class="list card">
 
+      <!-- Text inside moustaches {{}} is imported from controller -->
       <div class="item item-avatar">
         <img ng-src="{{ consultant.img }}">
-        <h2>{{consultant.name}}</h2>
-        <p>{{consultant.title}}</p>
+        <h2>{{ consultant.name }}</h2>
+        <p>{{ consultant.title }}</p>
       </div>
 
       <div class="item item-body">
         <img class="full-image" ng-src="{{ consultant.mainimg }}">
-        <p>{{consultant.profile}}</p>
+        <p>{{ consultant.profile }}</p>
         <a href='#/tab/contact' class='button button-small button-positive right-button button-center'>Contact us for more info!</a>
       </div>
     </div>

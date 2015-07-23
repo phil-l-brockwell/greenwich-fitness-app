@@ -1,11 +1,14 @@
+<!-- Home Page -->
 <ion-view view-title="Greenwich School of Fitness">
   <ion-content>
 
+    <!-- Slideshow -->
     <ion-slide-box>
+      <!-- Runs a loop on all items in the slides variable and does all of the content inside <ion-slide> for each item -->
       <ion-slide ng-repeat='slide in slides'>
         <div class='list card'>
           <div class='item item-image'>
-            <a ng-href='{{slide.a}}'><img alt='{{slide.alt}}' height='375' ng-src='{{slide.src}}'></a>
+            <a ng-href='{{ slide.a }}'><img alt='{{ slide.alt }}' height='375' ng-src='{{ slide.src }}'></a>
           </div>
         </div>
       </ion-slide>
@@ -13,15 +16,19 @@
 
     <div class='card'>
       <div class="item item-body">
+        <!-- Using angular ng-hide, this div is hidden when settings.notifications returns a truthy value -->
         <div class='push-down' ng-hide='settings.notifications'>
           <a class='button button-small button-positive button-center' href='#/tab/settings'>Switch on Timer</a>
         </div>
 
+        <!-- Using angular ng-show, this div is shown when settings.notifications returns a truthy value -->
         <div class='push-down' style='text-align: center;' ng-show='settings.notifications'>
           <div class='bar bar-header bar-calm'>
             <h4 class='title'>Next Visit In:</h4>
           </div>
+          <!-- Outputs time -->
           <h4>{{ timeRemaining().hours }} hours {{ timeRemaining().minutes }} minutes and {{ timeRemaining().seconds }} seconds...</h4>
+          <!-- ng-click is linked with a method inside the controller -->
           <button class='button button-small button-positive button-center' ng-click='resetTimer()'>Reset</button>
         </div>
       </div>

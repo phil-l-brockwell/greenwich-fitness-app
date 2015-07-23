@@ -1,11 +1,12 @@
-<ion-view view-title="{{item.name}}">
+<!-- Equipment detail page -->
+<ion-view view-title="{{ item.name }}">
   <ion-content class="padding">
     
     <div class="list card">
       <div class="item item-body">
-        <img class="full-image" ng-src="{{item.image}}">
-        <h1>£{{item.price}}</h1>
-        <p>{{item.description}}</p>
+        <img class="full-image" ng-src="{{ item.image }}">
+        <h1>£{{ item.price }}</h1>
+        <p>{{ item.description }}</p>
         <a href='#/tab/contact' class='button button-small button-positive button-center'>Contact us for more info!</a>
       </div>
     </div>

@@ -1,27 +1,37 @@
+<!-- This is the main view, all templates will be rendered inside here -->
 <!DOCTYPE html>
+<!-- References angular app and controller for changing css stylesheet -->
 <html ng-app="greenwichFitness" ng-controller="SettingsCtrl">
   <head>
     <meta charset="utf-8">
+    <!-- Sets variables for use on mobile devices -->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title>Greenwich School of Fitness</title>
 
+    <!-- Imports stylesheets -->
+    <!-- Any content inside moustaches {{}} is a variable inside the relevant controller -->
     <link ng-href="lib/ionic/css/{{ settings.style }}" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
+    <!-- Imports google maps script -->
     <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <!-- Imports ionic script -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- Imports cordova script -->
     <script src="cordova.js"></script>
+    <!-- Imports app, controllers and services -->
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
     <script src="js/services.js"></script>
   </head>
   <body>
-
-    <ion-nav-view></ion-nav-view>
-
+  <!-- Navigation bar that will exist on all pages -->
     <ion-nav-bar class="bar-calm">
+    <!-- Back button that will be rendered when required -->
       <ion-nav-back-button></ion-nav-back-button>
     </ion-nav-bar>
 
+    <!-- The selected template will be rendered inside here -->
+    <ion-nav-view></ion-nav-view>
   </body>
 </html>

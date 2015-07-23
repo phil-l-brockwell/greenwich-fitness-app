@@ -1,10 +1,11 @@
+<!-- Equipment page -->
 <ion-view view-title="Equipment">
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in items" type="item-text-wrap" href="#/tab/equiptment/{{item.id}}">
-        <img ng-src="{{item.image}}">
-        <h2>{{item.name}}</h2>
-        <p>£{{item.price}}</p>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in items" type="item-text-wrap" href="#/tab/equiptment/{{ item.id }}">
+        <img ng-src="{{ item.image }}">
+        <h2>{{ item.name }}</h2>
+        <p>£{{ item.price }}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
 
       </ion-item>

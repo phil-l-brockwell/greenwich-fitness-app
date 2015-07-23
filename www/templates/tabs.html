@@ -1,33 +1,35 @@
-<!--
-Create tabs with an icon and label, using the tabs-positive style.
-Each tab's child <ion-nav-view> directive will have its own
-navigation history that also transitions its views in and out.
--->
+<!-- Opens tabs bar and adds styling -->
 <ion-tabs class="tabs-icon-top tabs-color-active-stable tabs-calm">
+<!-- Defines each of the tabs for use in the navbar and app -->
+<!-- Each tab has a title various styling and is linked with one of the templates -->
+<!-- Which is rendered inside ion nav view -->
 
-  <!-- Dashboard Tab -->
+  <!-- Home Tab -->
   <ion-tab title="Home" icon-off="ion-ios-home" icon-on="ion-ios-home" href="#/tab/home">
     <ion-nav-view name="tab-home"></ion-nav-view>
   </ion-tab>
 
-  <!-- Chats Tab -->
+  <!-- Equipment Tab -->
   <ion-tab title="Equiptment" icon-off="ion-ios-americanfootball" icon-on="ion-ios-americanfootball" href="#/tab/equiptment">
     <ion-nav-view name="tab-equiptment"></ion-nav-view>
   </ion-tab>
 
-  <!-- Account Tab -->
+  <!-- Review Tab -->
   <ion-tab title="Reviews" icon-off="ion-chatboxes" icon-on="ion-chatboxes" href="#/tab/reviews">
     <ion-nav-view name="tab-reviews"></ion-nav-view>
   </ion-tab>
 
+  <!-- Consultants Tab -->
   <ion-tab title="Consultants" icon-off="ion-ios-people" icon-on="ion-ios-people" href="#/tab/consultants">
     <ion-nav-view name="tab-consultants"></ion-nav-view>
   </ion-tab>
 
+  <!-- Contact Tab -->
   <ion-tab title="Contact" icon-off="ion-at" icon-on="ion-at" href="#/tab/contact">
     <ion-nav-view name="tab-contact"></ion-nav-view>
   </ion-tab>
 
+  <!-- Settings Tab -->
   <ion-tab title="Settings" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/settings">
     <ion-nav-view name="tab-settings"></ion-nav-view>
   </ion-tab>

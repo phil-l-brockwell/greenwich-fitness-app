@@ -1,6 +1,7 @@
 <ion-view view-title="Reviews">
   <ion-content>
 
+    <!-- Pull to refresh element, linked with the refresh() method in reviews controller -->
     <ion-refresher pulling-text="Pull to refresh" on-refresh="refresh()"></ion-refresher>
 
     <div class="list list-inset">
@@ -15,15 +16,16 @@
       </button>
     </div>
 
+    <!-- Loops through all items in reviews array -->
     <div class='list card' ng-repeat='review in reviews'>
       <div class='item item-avatar item-divider item-light'>
         <img src='http://www.thepoweroffollowup.com/clientuploads/reviews-icon.png'>
-        <h4>On {{review.date}}</h4>
-        <h2 style='font-size: 25px; color: #387ef5'>{{review.author}}<small> said:</small></h2>
+        <h4>On {{ review.date }}</h4>
+        <h2 style='font-size: 25px; color: #387ef5'>{{ review.author }}<small> said:</small></h2>
       </div>
 
       <div class='item item-body' style='color: grey;'>
-        "{{review.text}}"
+        "{{ review.text }}"
       </div>
     </div>
 
