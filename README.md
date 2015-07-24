@@ -1,16 +1,15 @@
 # greenwich-fitness-app
 
-A mobile app built using Angular JS/Ionic Framework.
+A mobile app built using Angular JS/Ionic Framework, showcasing a fictional client; Greenwich School of Fitness.
 
-# Completed so far...
+# Getting Started
 
-* Decided to use Ionic framework as it uses Angular, and styling is almost identical to that of a native app
-* Reviews page added, can post new, upvote and downvote
-* Added google maps
-* Added slideshow
-* Built Rails API and hosted on heroku to store data: reviews, etc
-* Accessibility Features: Alternate style sheet for visually impaired users
+Clone the repo by entering `git@github.com:robertpulson/greenwich-fitness-app.git` into the terminal.
 
-# Next...
+Navigate into it using `cd greenwich-fitness-app`.
 
-* Rewrite Readme
+Use homebrew to install node (if not installed): `brew install node`.
+
+Then install Phonegap: `sudo npm install -g phonegap`.
+
+You can then serve the app to `http://localhost:8100/#/tab/home` by running `ionic serve`.
