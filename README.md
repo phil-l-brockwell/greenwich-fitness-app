@@ -13,5 +13,4 @@ A mobile app built using Angular JS/Ionic Framework.
 
 # Next...
 
-* Notifications
-* User Authentication
+* Rewrite Readme
