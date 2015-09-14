@@ -6,10 +6,10 @@ angular.module('greenwichFitness.controllers', [])
 // injects ionicpopup for pop up box functionality
 // injects scope to share variables with html views, 
 // any methods or variables prefixed with scope can be accessed within the view
-.controller('HomeCtrl', function($scope, Settings, $ionicSlideBoxDelegate, Home, $ionicPopup) {
+.controller('HomeCtrl', function($scope, Settings, $ionicSlideBoxDelegate, Home, $ionicPopup, $interval) {
   
   //sets an interval to transition the slideshow
-  setInterval(transistion, 5000);
+  $interval(transistion, 5000);
   //makes settings available to view
   $scope.settings = Settings;
   // makes slide available to view

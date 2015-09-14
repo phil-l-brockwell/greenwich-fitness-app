@@ -1,7 +1,7 @@
 angular.module('greenwichFitness.services', [])
 
 // settings service, injects ionicloading for animations whilst making http requests
-.factory('Settings', function($ionicLoading) {
+.factory('Settings', function($ionicLoading, $interval) {
 
   // defines stop variable used to hold a promise for setinterval method
   var stop;
@@ -33,9 +33,9 @@ angular.module('greenwichFitness.services', [])
   // method to start clock, clears interval using the stop promise
   // and starts a new timer, updating the stop variable
   o.startClock = function() {
-    clearInterval(stop);
+    $interval.cancel(stop);
     o.seconds = frequencies[o.frequency];
-    stop = setInterval(o.deductSecond, 1000);
+    stop = $interval(o.deductSecond, 1000);
   };
 
   // method to deduct a second
