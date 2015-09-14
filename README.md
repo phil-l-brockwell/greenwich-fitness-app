@@ -1,17 +1,37 @@
 # greenwich-fitness-app
 
-A mobile app built using Angular JS/Ionic Framework.
+A mobile app built using Angular JS/Ionic Framework, showcasing a fictional client; Greenwich School of Fitness.
 
-# Completed so far...
+## Key Learning Areas
+* Ionic Framework
+* HTTP requests
 
-* Decided to use Ionic framework as it uses Angular, and styling is almost identical to that of a native app
-* Reviews page added, can post new, upvote and downvote
-* Added google maps
-* Added slideshow
-* Built Rails API and hosted on heroku to store data: reviews, etc
-* Accessibility Features: Alternate style sheet for visually impaired users
+## JSON API
+The app uses a JSON api to store reviews, items and consultants. Before the load of a page, the app makes a relevant get request, as well as making a post request with any new reviews. The API also has a content management front end system which could potentially be used by the gym administration to update/monitor content centrally.
 
-# Next...
+Check out the API and code at the following links:
 
-* Notifications
-* User Authentication
+API
+Repo
+
+## Screenshots
+
+## Getting Started
+
+Clone the repo by entering `git clone git@github.com:robertpulson/greenwich-fitness-app.git` into the terminal.
+
+Navigate into it using `cd greenwich-fitness-app`.
+
+Use homebrew to install node (if not installed): `brew install node`.
+
+Then install Cordova: `npm install -g cordova`.
+
+And finally Ionic: `npm install -g ionic`
+
+You can then serve the app to `http://localhost:8100/#/tab/home` by running `ionic serve`.
+
+If you have xCode installed you can deploy the app to your phone by using:
+
+`cordova build ios`
+
+And then opening the `.xcodeproj` file inside `platforms -> ios`. If you connect a suitable device you can download the app to it, with full functionality, however an Apple Developers License is required for this.
