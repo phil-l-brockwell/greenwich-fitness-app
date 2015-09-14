@@ -21,7 +21,6 @@ Repo
 ![ScreenShot](https://github.com/robertpulson/greenwich-fitness-app/blob/master/screenshots/thumb_IMG_4206_1024.jpg)
 ![ScreenShot](https://github.com/robertpulson/greenwich-fitness-app/blob/master/screenshots/thumb_IMG_4207_1024.jpg)
 ![ScreenShot](https://github.com/robertpulson/greenwich-fitness-app/blob/master/screenshots/thumb_IMG_4208_1024.jpg)
-![ScreenShot](https://github.com/robertpulson/greenwich-fitness-app/blob/master/screenshots/thumb_IMG_4209_1024.jpg)
 ![ScreenShot](https://github.com/robertpulson/greenwich-fitness-app/blob/master/screenshots/thumb_IMG_4210_1024.jpg)
 ![ScreenShot](https://github.com/robertpulson/greenwich-fitness-app/blob/master/screenshots/thumb_IMG_4211_1024.jpg)
 
