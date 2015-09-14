@@ -11,8 +11,8 @@ The app uses a JSON api to store reviews, items and consultants. Before the load
 
 Check out the API and code at the following links:
 
-API
-Repo
+* [API](https://greenwich-fitness-api.herokuapp.com/)
+* [Repo](https://github.com/robertpulson/mobile_cw_api)
 
 ## Screenshots
 ![ScreenShot](https://github.com/robertpulson/greenwich-fitness-app/blob/master/screenshots/thumb_IMG_4203_1024.jpg)
